@@ -7,7 +7,10 @@ edition = "2021"
 
 [dependencies]
 reqwest = "0.11.18"
-serde = "1.0.174"
+serde = { version = "1.0.174", features = ["derive"] }
 serde_json = "1.0.103"
-tokio = { version = "1.29.1", features = ["full"] }
-
+teloxide = { version = "0.12", features = ["macros"] }
+tokio = { version = "1.29.1", features =  ["rt-multi-thread", "macros"] }
+log = "0.4"
+pretty_env_logger = "0.4"
+dotenv = "0.15.0"
